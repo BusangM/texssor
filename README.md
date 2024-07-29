@@ -63,5 +63,61 @@ These tools work together to create an automated grading system that leverages d
 
 
 
+## Important Keywords Explained In Simple English
+
+#### Tokenization: 
+
+- Definition: The process of breaking down a string of text into smaller chunks called tokens.
+- Purpose: To convert the raw text into manageable pieces for further processing.
+- Example: For the sentence "I love NLP":
+ 
+      Word-level tokenization: ["I", "love", "NLP"]
+
+      Subword-level tokenization: ["I", "lo", "ve", "NL", "P"]
+      
+      Character-level tokenization: ["I", " ", "l", "o", "v", "e", " ", "N", "L", "P"]
 
 
+#### Embedding:
+
+- Definition: The process of converting tokens into dense numerical vectors that represent the tokens in a meaningful way.
+- Purpose: To transform the tokens into a format that a machine learning model can understand and process, capturing semantic relationships.
+- Example: After tokenization, the tokens ["I", "love", "NLP"] might be converted to numerical vectors like:
+      
+      "I": [0.1, 0.2, 0.3]
+      "love": [0.4, 0.5, 0.6]
+      "NLP": [0.7, 0.8, 0.9]
+
+#### Tensor
+
+Definition:
+
+A tensor is a generalisation of scalars, vectors, and matrices to potentially higher dimensions.
+It can be thought of as an n-dimensional array.
+   
+   Dimensions:
+
+      - Scalar: A single number (0-dimensional tensor). e.g 7
+
+      - Vector: A 1-dimensional array of numbers. e.g [1,2,3]
+
+      - Matrix: A 2-dimensional array of numbers. e.g
+      |1 2|
+      |3 4|
+      - Higher-order Tensors: Arrays with 3 or more dimensions. 
+
+      - 3D Tensor: An array of matrices, like a cube of numbers.
+
+How they are related? 
+
+After tokenizing a sentence, we often convert the tokens into numerical representations (token IDs).
+These token IDs can be represented as tensors to be processed by neural networks.
+
+When we use a model to generate embeddings, the output is typically a tensor.
+For example, if we tokenize a sentence and use a model to get embeddings, the embeddings are stored in a tensor where each token has its corresponding embedding vector.
+
+In conclusion, they are used to store token IDs and embeddings, enabling efficient processing by neural networks. Tensors are essential for handling the multi-dimensional data involved in deep learning tasks.
+
+#### Neural Network
+
+Neural Networks are computational models inspired by the human brain's structure and function. They are designed to recognise patterns and make predictions based on data. Neural networks consist of layers of interconnected nodes, or neurons, where each connection has an associated weight.
